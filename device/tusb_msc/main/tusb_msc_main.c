@@ -484,8 +484,8 @@ void app_main(void)
         .string_descriptor = string_desc_arr,
         .external_phy = false,
         .configuration_descriptor = desc_configuration,
-        .self_powered = true,
-        .vbus_monitor_io = VBUS_MONITORING_GPIO_NUM,
+        .self_powered = false,
+        .vbus_monitor_io = GPIO_NUM_NC,
     };
     ESP_ERROR_CHECK(tinyusb_driver_install(&tusb_cfg));
     ESP_LOGI(TAG, "USB MSC initialization DONE");
